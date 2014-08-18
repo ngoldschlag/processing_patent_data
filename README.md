@@ -17,4 +17,7 @@ Execution: execute via terminal. The script will prompt the user to define ('y' 
 3) process 2005-2014
 4) collapse monthly files
 
+These files can be requested on disk format from the USPTO or downloaded online via the following link.
+http://patents.reedtech.com/pgrbbib.php (accessed 8/17/2014)
+
 License: This program is free software; you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation; either version 3 of the License, or (at your option) any later version. Included libraries are subject to their own licenses.
