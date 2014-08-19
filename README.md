@@ -17,6 +17,8 @@ Execution: execute via terminal. The script will prompt the user to define ('y' 
 3) process 2005-2014
 4) collapse monthly files
 
+WARNING: this program spawns 4 multi-processes and therefore can be very memory and cpu intensive.
+
 These files can be requested on disk format from the USPTO or downloaded online via the following link.
 http://patents.reedtech.com/pgrbbib.php (accessed 8/17/2014)
 
