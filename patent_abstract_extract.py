@@ -143,8 +143,9 @@ def multi_procPatFiles7601(yearFiles):
     for fileName in yearFiles:
         # Report progress
         if fileName in [i[-1] for i in progSplit]:
-            prct = str(round(yearFiles.index(fileName)/float(len(yearFiles)),2))+'0'
-            print '{0} is {1}% complete'.format(multiprocessing.current_process().name, prct[3:])
+            prct = round(yearFiles.index(fileName)/float(len(yearFiles)),2)
+            prct = str(prct*100)[:4 + 2]
+            print '{0} is {1}% complete'.format(multiprocessing.current_process().name, prct)
         fileYear = fileName[0:4]
         f = codecs.open(dataPath+'/{0}'.format(fileName), encoding='ISO-8859-1')
         f = open(dataPath+'/{0}'.format(fileName),'r')
@@ -173,8 +174,9 @@ def multi_procPatFiles0204(monthFiles):
         #print '{0} is starting'.format(multiprocessing.current_process().name), fileName
         # Report progress
         if fileName in [i[-1] for i in progSplit]:
-            prct = str(round(monthFiles.index(fileName)/float(len(monthFiles)),2))+'0'
-            print '{0} is {1}% complete'.format(multiprocessing.current_process().name, prct[3:])
+            prct = round(monthFiles.index(fileName)/float(len(monthFiles)),2)
+            prct = str(prct*100)[:4 + 2]
+            print '{0} is {1}% complete'.format(multiprocessing.current_process().name, prct)
         fileDate = fileName[3:11]
         f = open(dataPath+'/{0}'.format(fileName),'r')
         content = f.readlines()
@@ -201,8 +203,9 @@ def multi_procPatFiles0514(monthFiles):
     for fileName in monthFiles:
         # Report progress
         if fileName in [i[-1] for i in progSplit]:
-            prct = str(round(monthFiles.index(fileName)/float(len(monthFiles)),2))+'0'
-            print '{0} is {1}% complete'.format(multiprocessing.current_process().name, prct[3:])
+            prct = round(monthFiles.index(fileName)/float(len(monthFiles)),3)
+            prct = str(prct*100)[:4 + 2]
+            print '{0} is {1}% complete'.format(multiprocessing.current_process().name, prct)
         fileDate = fileName[4:12]
         f = open(dataPath+'/{0}'.format(fileName),'r')
         content = f.readlines()
@@ -229,8 +232,9 @@ def multi_collapseYears(years):
     for yr in years:
         # Report progress
         if yr in [i[-1] for i in progSplit]:
-            prct = str(round(years.index(yr)/float(len(years)),2))+'0'
-            print '{0} is {1}% complete'.format(multiprocessing.current_process().name, prct[3:])
+            prct = round(years.index(yr)/float(len(years)),3)
+            prct = str(prct*100)[:4 + 2]
+            print '{0} is {1}% complete'.format(multiprocessing.current_process().name, prct)
         filesToCollapse = [x for x in monthFiles if x[6:10]==yr]
         baseFile = open(mthAbsPath+'/{0}'.format(filesToCollapse[0]),'r')
         baseDict = json.load(baseFile)
