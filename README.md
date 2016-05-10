@@ -17,9 +17,11 @@ Execution: execute via terminal. The script will prompt the user to define ('y' 
 3) process 2005-2014
 4) collapse monthly files
 
-WARNING: this program spawns 4 multi-processes and therefore can be very memory and cpu intensive.
+WARNING: this program spawns multi-processes and therefore can be very memory and cpu intensive.
 
 These files can be requested on disk format from the USPTO or downloaded online via the following link.
 http://patents.reedtech.com/pgrbbib.php (accessed 8/17/2014)
 
 License: This program is free software; you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation; either version 3 of the License, or (at your option) any later version. Included libraries are subject to their own licenses.
+
+DISCLAIMER: This site is maintained by Nathan Goldschlag. Opinions expressed here do not reflect the official views of the U.S. Census Bureau or any other public or private organization.
